@@ -49,6 +49,7 @@ private:
 		//myRobot.TankDrive(LStick, RStick)
 		LStick = WExbox.GetY((frc::GenericHID::JoystickHand)0);
 		RStick = WExbox.GetY((frc::GenericHID::JoystickHand)1);
+		//Sets both motors to be controlled by the Y-Value of the Left joystick
 		Spark1.Set(LStick);
 		Spark0.Set(LStick);
 	}
