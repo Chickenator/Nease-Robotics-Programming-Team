@@ -49,8 +49,9 @@ private:
 		//myRobot.TankDrive(LStick, RStick)
 		LStick = WExbox.GetY((frc::GenericHID::JoystickHand)0);
 		RStick = WExbox.GetY((frc::GenericHID::JoystickHand)1);
-		Spark1.Set(.5);
-		Spark0.Set(.5);
+		//Assigns motor speed to the Y-Value of the left joystick
+		Spark1.Set(LStick);
+		Spark0.Set(LStick);
 	}
 
 	void TestPeriodic() override {
